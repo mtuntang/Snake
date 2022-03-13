@@ -6,18 +6,25 @@ using System.Threading.Tasks;
 
 namespace Classic_Snake
 {
+    public enum Directions
+    {
+        Up,
+        Down,
+        Left,
+        Right
+    }
     class Settings
     {
         public static int  Width { get; set; }
         public static int Height { get; set; }
 
-        public static string Directions;
+        public Directions CurrentDirection;
 
         public Settings()
         {
             Width = 16;
             Height = 16;
-            Directions = "left";
+            CurrentDirection = Directions.Right;
         }
     }
 }
