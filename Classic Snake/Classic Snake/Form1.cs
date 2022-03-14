@@ -37,6 +37,12 @@ namespace Classic_Snake
             RestartGame();
         }
 
+        private void ResetSizeButton_Click(object sender, EventArgs e)
+        {
+            _snake.Clear();
+            RestartGame();
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -72,10 +78,7 @@ namespace Classic_Snake
             }
         }
 
-        private void CaptureButton_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void UpdateGraphics(object sender, PaintEventArgs e)
         {
@@ -117,7 +120,7 @@ namespace Classic_Snake
             _maxHeight = GameScreen.Height / Settings.Height - 1;
 
             StartButton.Enabled = false;
-            CaptureButton.Enabled = false;
+            ResetSizeButton.Enabled = false;
             _score = 0;
             ScoreLabel.Text = "Score: " + _score;
 
@@ -136,6 +139,7 @@ namespace Classic_Snake
                 _snake.Grow();
                 _food = new Circle() { X = _rng.Next(2, _maxWidth), Y = _rng.Next(2, _maxHeight) }; ;
                 _score++;
+                ScoreLabel.Text = "Score: " + _score;
             }
         }
 
@@ -143,7 +147,7 @@ namespace Classic_Snake
         {
             gameTimer.Stop();
             StartButton.Enabled = true;
-            CaptureButton.Enabled = true;
+            ResetSizeButton.Enabled = true;
 
             if (_score > _highScore)
             {

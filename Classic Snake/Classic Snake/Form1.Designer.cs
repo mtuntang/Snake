@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.StartButton = new System.Windows.Forms.Button();
-            this.CaptureButton = new System.Windows.Forms.Button();
+            this.ResetSizeButton = new System.Windows.Forms.Button();
             this.GameScreen = new System.Windows.Forms.PictureBox();
             this.ScoreLabel = new System.Windows.Forms.Label();
             this.HighScoreLabel = new System.Windows.Forms.Label();
@@ -50,17 +50,17 @@
             this.StartButton.UseVisualStyleBackColor = false;
             this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
-            // CaptureButton
+            // ResetSizeButton
             // 
-            this.CaptureButton.BackColor = System.Drawing.Color.Aquamarine;
-            this.CaptureButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CaptureButton.Location = new System.Drawing.Point(570, 111);
-            this.CaptureButton.Name = "CaptureButton";
-            this.CaptureButton.Size = new System.Drawing.Size(111, 52);
-            this.CaptureButton.TabIndex = 1;
-            this.CaptureButton.Text = "Capture";
-            this.CaptureButton.UseVisualStyleBackColor = false;
-            this.CaptureButton.Click += new System.EventHandler(this.CaptureButton_Click);
+            this.ResetSizeButton.BackColor = System.Drawing.Color.Aquamarine;
+            this.ResetSizeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetSizeButton.Location = new System.Drawing.Point(570, 111);
+            this.ResetSizeButton.Name = "ResetSizeButton";
+            this.ResetSizeButton.Size = new System.Drawing.Size(111, 52);
+            this.ResetSizeButton.TabIndex = 1;
+            this.ResetSizeButton.Text = "Reset";
+            this.ResetSizeButton.UseVisualStyleBackColor = false;
+            this.ResetSizeButton.Click += new System.EventHandler(this.ResetSizeButton_Click);
             // 
             // GameScreen
             // 
@@ -108,7 +108,7 @@
             this.Controls.Add(this.HighScoreLabel);
             this.Controls.Add(this.ScoreLabel);
             this.Controls.Add(this.GameScreen);
-            this.Controls.Add(this.CaptureButton);
+            this.Controls.Add(this.ResetSizeButton);
             this.Controls.Add(this.StartButton);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -123,7 +123,7 @@
         #endregion
 
         private System.Windows.Forms.Button StartButton;
-        private System.Windows.Forms.Button CaptureButton;
+        private System.Windows.Forms.Button ResetSizeButton;
         private System.Windows.Forms.PictureBox GameScreen;
         private System.Windows.Forms.Label ScoreLabel;
         private System.Windows.Forms.Label HighScoreLabel;
