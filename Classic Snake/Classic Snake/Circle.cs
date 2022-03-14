@@ -8,13 +8,13 @@ namespace Classic_Snake
 {
     class Circle
     {
-        public int x { get; set; }
-        public int y { get; set; }
+        public int X { get; set; }
+        public int Y { get; set; }
         
         public Circle()
         {
-            this.x = 0;
-            this.y = 0;
+            this.X = 0;
+            this.Y = 0;
         }
     }
 }
